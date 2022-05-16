@@ -34,23 +34,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(720, 1280),
-      builder: () {
-        return GetMaterialApp(
-          debugShowCheckedModeBanner: false,
-          initialRoute: '/',
-          unknownRoute: GetPage(name: '/notfound',page:() => Container(child: Text('404'),),),
-          routes: {
-            '/': (context) => Inicio(),
-            '/servicios': (context) => const Servicios(),
-            '/metodologia': (context) => const Metodologia(),
-            '/contact': (context) => const ContactView(),
-          },
-          theme: ThemeData(
-            primarySwatch: white,
-          ),
-        );
-      },
-
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: '/',
+        unknownRoute: GetPage(name: '/notfound',page:() => Container(child: Text('404'),),),
+        routes: {
+          '/': (context) => Inicio(),
+          '/services': (context) => const Servicios(),
+          '/methodology': (context) => const Metodologia(),
+          '/contact': (context) => const ContactView(),
+        },
+        theme: ThemeData(
+          primarySwatch: white,
+        ),
+      ),
     );
   }
 }

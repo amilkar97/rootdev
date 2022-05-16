@@ -13,7 +13,7 @@ class Footer extends StatelessWidget {
       child: const Center(
           child: MouseRegion(
             cursor: SystemMouseCursors.text,
-            child: Text('Copyright 2021 Todos los derechos reservados | Rootdev Company | David, Chiriquí, Panamá',
+            child: Text('Copyright 2022 Todos los derechos reservados | Rootdev Company | David, Chiriquí, Panamá',
             style: TextStyle(color: Colors.white),textAlign: TextAlign.center,),
           )
       ),

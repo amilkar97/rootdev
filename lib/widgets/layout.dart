@@ -16,7 +16,8 @@ class MyLayout extends StatelessWidget {
     return  Scaffold(
       endDrawer: width < 768 ?  MyDrawer() : null,
       appBar: const MyAppBar(),
-      bottomSheet: const Footer(),
+      //bottomSheet: const Footer(),
+      bottomNavigationBar: const Footer(),
       body: child,
     );
   }

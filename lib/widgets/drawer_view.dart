@@ -35,7 +35,7 @@ class MyDrawer extends StatelessWidget {
           ),
           const SizedBox(height: 20,),
           RawMaterialButton(
-            onPressed: () => Get.toNamed('/servicios'),
+            onPressed: () => Get.toNamed('/services'),
             fillColor: Colors.white,
             focusColor: Colors.white,
             hoverColor: Colors.white,
@@ -53,9 +53,9 @@ class MyDrawer extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           RawMaterialButton(
-            onPressed: () => Get.toNamed('/metodologia'),
+            onPressed: () => Get.toNamed('/methodology'),
             fillColor: Colors.white,
             focusColor: Colors.white,
             hoverColor: Colors.white,
@@ -84,7 +84,7 @@ class MyDrawer extends StatelessWidget {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Text('Contactanos',style: GoogleFonts.andikaNewBasic(fontSize: 15,color: Colors.white),),
+                    child: Text('Contáctanos',style: GoogleFonts.andikaNewBasic(fontSize: 15,color: Colors.white),),
                   ),
                 )
             ),

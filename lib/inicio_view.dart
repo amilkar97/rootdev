@@ -28,7 +28,7 @@ class InicioState extends State<Inicio>{
        ..initialize().then((_) {
          setState(() {});
        });
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       _controller..play()..setLooping(true)..setVolume(0);
       _controller2..play()..setLooping(true)..setVolume(0);
     });
@@ -43,52 +43,54 @@ class InicioState extends State<Inicio>{
           children: [
             SizedBox(
               width: double.infinity,
-              height: (width > 768 ? 500 : 300) * 3/1.w ,
-              child: Center(
-                child: Wrap(
-                  direction: Axis.horizontal,
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  runAlignment: WrapAlignment.center,
-                  alignment: WrapAlignment.center,
-                  children: [
-                    SizedBox(
-                      width: width > 768 ? width /3 : width,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text('Soluciones Multiplataforma',style: GoogleFonts.andika(fontSize: 45,fontWeight: FontWeight.bold), textAlign: width > 768 ? TextAlign.start : TextAlign.center,),
-                            Text('Construimos tu necesidad en cualquier ambiente tecnológico (Aplicaciones móviles para Android y iOS, aplicaciones de escritorio y web).',
-                              style: GoogleFonts.andika(fontSize: 25,),textAlign: TextAlign.justify,
-                              softWrap: true,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: width > 768 ? width/2 : double.infinity*0.95,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Container(color: Colors.black.withOpacity(0.98),
-                          height: (width > 768 ? 600 : 350) * 1.5/1.w,
-                          width: 900.w,
-                          child: Wrap(
-                            direction: Axis.horizontal,
-                            alignment: WrapAlignment.spaceEvenly,
-                            runAlignment: WrapAlignment.spaceEvenly,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 75,horizontal: 20),
+                child: Center(
+                  child: Wrap(
+                    direction: Axis.horizontal,
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    runAlignment: WrapAlignment.center,
+                    alignment: WrapAlignment.center,
+                    children: [
+                      SizedBox(
+                        width: width > 768 ? width /3 : width,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              SizedBox(width: 200,height: 300,child: VideoPlayer(_controller2)),
-                              const Image(image: AssetImage('assets/computer2.png',),width: 200,height: 300,),
-                              SizedBox(width: 200,height: 300,child: VideoPlayer(_controller)),
+                              Text('Soluciones Multiplataforma',style: GoogleFonts.andika(fontSize: 45,fontWeight: FontWeight.bold), textAlign: width > 768 ? TextAlign.start : TextAlign.center,),
+                              Text('Construimos tu necesidad en cualquier ambiente tecnológico (Aplicaciones móviles para Android y iOS, aplicaciones de escritorio y web).',
+                                style: GoogleFonts.andika(fontSize: 25,),textAlign: TextAlign.justify,
+                                softWrap: true,
+                              ),
                             ],
                           ),
                         ),
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        width: width > 768 ? width/2 : double.infinity*0.95,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Container(color: Colors.black.withOpacity(0.98),
+                            height: (width > 768 ? 600 : 350) * 1.5/1.w,
+                            width: 900.w,
+                            child: Wrap(
+                              direction: Axis.horizontal,
+                              alignment: WrapAlignment.spaceEvenly,
+                              runAlignment: WrapAlignment.spaceEvenly,
+                              children: [
+                                SizedBox(width: 200,height: 300,child: VideoPlayer(_controller2)),
+                                const Image(image: AssetImage('assets/computer2.png',),width: 200,height: 300,),
+                                SizedBox(width: 200,height: 300,child: VideoPlayer(_controller)),
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -109,7 +111,7 @@ class InicioState extends State<Inicio>{
                         width: (width > 768 ? width/3 : width),
                         child: Column(
                           children: [
-                            Icon(Icons.fact_check_outlined,color: Colors.purple,size: 20.sp,),
+                            const Icon(Icons.fact_check_outlined,color: Colors.purple,size: 40,),
                             Text('Nuestra metodología',style: GoogleFonts.andika(fontSize: 30,fontWeight: FontWeight.bold),),
                             Text('Nuestra metodología se basa en desarrollar sistemas acordes a las necesidades de nuestros clientes, creando una experiencia de usuario unica ligada a las mejores prácticas de desarrollo.',
                               style: GoogleFonts.andika(fontSize: 20),textAlign: TextAlign.justify,
@@ -122,7 +124,7 @@ class InicioState extends State<Inicio>{
                         width: (width > 768 ? width/3 : width),
                         child: Column(
                           children: [
-                            Icon(Icons.memory,color: Colors.cyan,size: 20.sp,),
+                            const Icon(Icons.memory,color: Colors.cyan,size: 40,),
                             Text('Tecnología',style: GoogleFonts.andika(fontSize: 30,fontWeight: FontWeight.bold),),
                             Text('Las tecnologias usadas en nuestros proyectos garatizan la escalabilidad y seguridad de su sistema.',
                               style: GoogleFonts.andika(fontSize: 20),textAlign: TextAlign.justify,
@@ -138,11 +140,10 @@ class InicioState extends State<Inicio>{
             ),
             SizedBox(
               width: double.infinity,
-              height: (width > 1100 ? 500 : (width > 768 ? 350 : 300)) * 1.5/1.w,
               child: Container(
                 color: Colors.blueGrey.withOpacity(0.2),
                 child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 30,horizontal: 20),
+                    padding: const EdgeInsets.symmetric(vertical: 60,horizontal: 20),
                     child: Wrap(
                       direction: Axis.horizontal,
                       alignment: WrapAlignment.center,
@@ -153,7 +154,7 @@ class InicioState extends State<Inicio>{
                           width: (width > 768 ? width/3 : width),
                           child: Column(
                             children: [
-                              Icon(Icons.design_services,color: Colors.orange,size: 20.sp,),
+                              const Icon(Icons.design_services,color: Colors.orange,size: 40,),
                               Text('Diseño',style: GoogleFonts.andika(fontSize: 30,fontWeight: FontWeight.bold),),
                               Text('Nuestros diseñadores crean e implementan diseños en nuestros sistemas formando una experiencia de usuario libre y única.',
                                 style: GoogleFonts.andika(fontSize: 20),textAlign: TextAlign.justify,
@@ -166,7 +167,7 @@ class InicioState extends State<Inicio>{
                           width: (width > 768 ? width/3 : width),
                           child: Column(
                             children: [
-                              Icon(Icons.support_agent,color: Colors.green,size: 20.sp,),
+                              const Icon(Icons.support_agent,color: Colors.green,size: 40,),
                               Text('Creciendo junto a ti',style: GoogleFonts.andika(fontSize: 30,fontWeight: FontWeight.bold),),
                               Text('Como la prioridad de nuestro trabajo es la escabilidad, puedes hacer crecer tu sistema en cualquier momento.',
                                 style: GoogleFonts.andika(fontSize: 20),textAlign: TextAlign.justify,
@@ -182,10 +183,10 @@ class InicioState extends State<Inicio>{
             ),
             Container(
               color: Colors.white,
-              height: 500,
+              width: double.infinity,
               child: Padding(
-                padding: const EdgeInsets.all(15),
-                child: Image.asset('assets/logo-landscape.png',width: double.infinity,scale: 4,),
+                padding: const EdgeInsets.symmetric(vertical: 60,horizontal: 20),
+                child: Image.asset('assets/logo-landscape.png',height: 200,),
               ),
             )
           ],
