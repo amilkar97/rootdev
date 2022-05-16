@@ -4,14 +4,15 @@ Sitio web de Rootdev Company.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Este es un sitio web propio realizado con flutter, cabe recalcar que Flutter en entorno web lo considero beta aun.
 
-A few resources to get you started if this is your first Flutter project:
+A continuacion dejo el link del sitio e imagenes
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# rootdev-landingpage
+https://www.rootdevcompany.com
+
+
+
+![rootdev1](https://user-images.githubusercontent.com/46451218/156926732-654e9f64-6659-4da6-b8be-ae404fa60120.png)
+![rootdev2](https://user-images.githubusercontent.com/46451218/156926735-7ab2993d-f292-46cc-afba-244620ad6f78.png)
+![rootdev3](https://user-images.githubusercontent.com/46451218/156926736-929580e2-ce3c-4563-bad6-6b810e1c2aa2.png)
